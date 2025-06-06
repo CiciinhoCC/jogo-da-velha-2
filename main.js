@@ -165,7 +165,7 @@ document.querySelectorAll(".quadrado").forEach(elem => {
                 pintar(vitorioso, elem.coord[0]);
             }
 
-            let ganhador = checarVitoria(jogo.map(function (x) { return x[0]; }));
+            let ganhador = checarVitoria(table.map(function (x) { return x[0]; }));
             if (ganhador !== " ") {
                 alert(ganhador + " ganhou, yippie!");
                 acabou = true;
