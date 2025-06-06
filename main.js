@@ -156,6 +156,8 @@ document.querySelectorAll(".quadrado").forEach(elem => {
             table[elem.coord[0]][elem.coord[1]] = jogador;
             highlight(elem.coord[1], possibilidades(table[elem.coord[1]]));
 
+            trocaPlayer();
+
             let vitorioso = checarVitoria(table[elem.coord[0]]);
 
             if (vitorioso !== " ") {
@@ -163,15 +165,13 @@ document.querySelectorAll(".quadrado").forEach(elem => {
                 pintar(vitorioso, elem.coord[0]);
             }
 
-            let ganhador = checarVitoria(jogo.map(function (x) {return x[0];}));
-            if(ganhador !== " "){
+            let ganhador = checarVitoria(jogo.map(function (x) { return x[0]; }));
+            if (ganhador !== " ") {
                 alert(ganhador + " ganhou, yippie!");
                 acabou = true;
             }
             //eu tô c preguiça de checar se isso aq funciona, só vou publicar logo
-
-    trocaPlayer();
-}
+        }
     })
 })
 
