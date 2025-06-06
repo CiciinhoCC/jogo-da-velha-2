@@ -160,7 +160,7 @@ document.querySelectorAll(".quadrado").forEach(elem => {
 
             let vitorioso = checarVitoria(table[elem.coord[0]]);
 
-            if (vitorioso !== " " && table[elem.coord[0]] == " ") {
+            if (vitorioso !== " " && table[elem.coord[0]][0] == " ") {
                 table[elem.coord[0]][0] = vitorioso;
                 pintar(vitorioso, elem.coord[0]);
             }
